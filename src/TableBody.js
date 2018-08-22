@@ -69,7 +69,7 @@ class TableBody extends Component {
             return column.format(value, data, column.formatExtraData, r).replace(/<.*?>/g, '');
           } : false;
           if (Utils.isFunction(column.editable)) {
-            editable = column.editable(fieldValue, data, r, i);
+            editable = column.editable(fieldValue, data, r, i,column);
           }
 
           return (
